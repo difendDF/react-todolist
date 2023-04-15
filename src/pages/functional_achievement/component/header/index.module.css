@@ -1,0 +1,11 @@
+.wrapper{
+  margin-bottom: 10px;
+  padding: 4px 7px;;
+}
+
+.headerTip {
+  font-size: 12px;
+  color: red;
+  height: 14px;
+  margin-top: 10px;
+}

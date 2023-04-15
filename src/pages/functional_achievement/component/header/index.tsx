@@ -1,18 +1,32 @@
 import * as React from 'react';
 
-interface Iprops {
+import styles from './index.module.css';
+import { Input } from 'antd';
 
+interface Iprops {
+  addItem?: (name: string) => void; // 新增事项
 }
 
 const Header: React.FC<Iprops> = props => {
-  // 处理Enter事件
-  const handleKeyUp = (e) => {
+  const { addItem } = props;
+  const [tipStatus, setTipStatus] = React.useState(false);
 
-  }
+  const onPressEnter = (e: any) => {
+    if(e.target.value.trim() === '') {
+      setTipStatus(true);
+      return;
+    }
+    setTipStatus(false);
+    addItem?.(e.target.value.trim());
+  };
 
   return (
-    <div className='functional-header-wrapper'>
-      <input type="text" placeholder="请输入你的任务名称，按回车键确认" onKeyUp={(e) => handleKeyUp(e)}/>
+    <div className={styles.wrapper}>
+      <Input
+        style={{width: '560px', height: '28px'}}
+        onPressEnter={onPressEnter}
+      />
+      { tipStatus && <div className={styles.headerTip}>请输入代办事项！</div> }
     </div>
   );
 }
