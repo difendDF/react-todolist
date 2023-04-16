@@ -24,4 +24,5 @@ To learn more about Next.js, take a look at the following resources:
 All React ToDoList Achievements are in `src/pages`
 
 + functional_achievement is the functional component, visit in [http://localhost:3000/functional_achievement](http://localhost:3000/functional_achievement)
++ fun_expe is a test of `Closure traps`, visit in [http://localhost:3000/fun_expe](http://localhost:3000/fun_expe)
 
