@@ -1,0 +1,12 @@
+.itemWrapper {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  align-items: center;
+}
+
+.itemWrapper .itemName {
+  font-size: 16px;
+  margin: 0 10px;
+}
